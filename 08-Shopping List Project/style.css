@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --ff-sans: "Poppins", sans-serif;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-400: 0.8125rem;
+
+    --clr-bg: hsl(0, 0%, 94%);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-border: hsl(0, 2%, 77%);
+    --clr-dark-red: hsl(0, 100%, 27%);
+    --clr-dark-gray: hsl(0, 0%, 20%);
+}
+
+/* ------- CSS Reset ------- */
+
+/* Box Sizing Rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Stop text inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+    margin: 0;
+}
+
+/* Reset core defaults */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Reduce line height for headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+input,
+label,
+button {
+    line-height: 1.1;
+}
+
+/* Makes it easier to work with images */
+img,
+svg,
+video,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherits font weight and font size */
+input,
+select,
+textarea,
+button {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* Reset default settings of unordered and ordered lists */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------- Utility Classes ------- */
+
+.container {
+    width: 90%;
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+/* ------- General Styles ------- */
+
+body {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-400);
+    background-color: var(--clr-bg);
+    padding: 5rem;
+
+    display: grid;
+    align-items: center;
+}
+
+/* ------- Layout Styles ------- */
+
+.shopping-list>* {
+    margin-bottom: 1.5em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header img {
+    width: 50px;
+}
+
+.header__title {
+    font-weight: var(--fw-light);
+    font-size: 1.75rem;
+}
+
+.form__control {
+    margin-top: 1em;
+}
+
+#item {
+    padding: 0.5rem;
+    border: 1px solid var(--clr-border);
+    border-radius: 5px;
+    width: 100%;
+    letter-spacing: 0.25px;
+}
+
+#item:focus {
+    outline: none;
+}
+
+.error {
+    font-size: 0.75rem;
+    color: var(--clr-dark-red);
+    text-align: right;
+    display: none;
+}
+
+.btn-primary {
+    padding: 0.5em 1em;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.filter {
+    display: none;
+}
+
+.filter input {
+    border: 0;
+    padding: 0.5em;
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid var(--clr-border);
+    color: var(--clr-dark-gray);
+    font-weight: var(--fw-bold);
+}
+
+.filter input:focus {
+    outline: none;
+}
+
+.list-items {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list-items>* {
+    padding: 0.5em 0.75em;
+    border: 1px solid var(--clr-border);
+    border-radius: 4px;
+    font-weight: var(--fw-bold);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item > button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.item > button i {
+    color: var(--clr-dark-red);
+}
+
+.btn-secondary {
+    padding: 0.75em 1em;
+    border-radius: 5px;
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    display: none;
+}
