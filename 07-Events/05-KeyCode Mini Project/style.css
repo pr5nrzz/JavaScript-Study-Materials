@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+
+    background-color: #e1e1e1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#insert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.key {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.key small {
+    background-color: white;
+    border: 1px solid #999;
+    padding: 1em 2.5em;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+}
